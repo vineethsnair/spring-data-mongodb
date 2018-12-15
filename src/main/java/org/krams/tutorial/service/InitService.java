@@ -18,9 +18,10 @@ import org.springframework.transaction.annotation.Transactional;
  * 
  * @author Krams at {@link http://krams915@blogspot.com}
  */
+
 @Transactional
 public class InitService {
-
+	
 	protected static Logger logger = Logger.getLogger("service");
 	
 	@Resource(name="mongoTemplate")
@@ -29,7 +30,7 @@ public class InitService {
 	private void init() {
 		// Populate our MongoDB database
 		logger.debug("Init MongoDB users");
-		
+		logger.info("Testing the method");
 		// Drop existing collection
 		mongoTemplate.dropCollection("mycollection");
 		

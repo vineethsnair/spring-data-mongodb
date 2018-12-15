@@ -4,6 +4,10 @@
 	<servlet>
 		<servlet-name>spring</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+       		<param-name>contextConfigLocation</param-name>
+       		<param-value>/WEB-INF/applicationContext.xml</param-value><!-- enable mvc annotations in this file -->
+   		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 	

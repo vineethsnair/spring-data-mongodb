@@ -31,6 +31,7 @@ public class MainController {
 	 * Handles and retrieves all persons and show it in a JSP page
 	 * 
 	 * @return the name of the JSP page
+	 * url to call : http://localhost:8080/spring-data-mongodb/krams/main/persons
 	 */
     @RequestMapping(value = "/persons", method = RequestMethod.GET)
     public String getPersons(Model model) {
@@ -42,7 +43,7 @@ public class MainController {
     	
     	// Attach persons to the Model
     	model.addAttribute("persons", persons);
-    	
+    	logger.info(persons);
     	// This will resolve to /WEB-INF/jsp/personspage.jsp
     	return "personspage";
 	}
